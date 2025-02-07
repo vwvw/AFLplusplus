@@ -488,8 +488,14 @@ directory. This includes:
 - `cycles_done`       - queue cycles completed so far
 - `cycles_wo_finds`   - number of cycles without any new paths found
 - `time_wo_finds`     - longest time in seconds no new path was found
+- `fuzz_time`         - time spent fuzzing
+- `calibration_time`  - time spent calibrating
+- `cmplog_time`       - time spent in cmplog
+- `sync_time`         - time spent syncing
+- `trim_time`         - time spent trimming
 - `execs_done`        - number of execve() calls attempted
 - `execs_per_sec`     - overall number of execs per second
+- `execs_ps_last_min` - number of execs per second in the last minute
 - `corpus_count`      - total number of entries in the queue
 - `corpus_favored`    - number of queue entries that are favored
 - `corpus_found`      - number of entries discovered through local fuzzing
@@ -511,7 +517,14 @@ directory. This includes:
 - `slowest_exec_ms`   - real time of the slowest execution in ms
 - `peak_rss_mb`       - max rss usage reached during fuzzing in MB
 - `edges_found`       - how many edges have been found
+- `total_edges`       - total number of edges found
+- `cpu_affinity`      - -1 if no CPU affinitiy, CPU id otherwise
 - `var_byte_count`    - how many edges are non-deterministic
+- `havoc_expansion`   -
+- `auto_dict_entries` -
+- `testcache_size`    -
+- `testcache_count`   - 
+- `testcache_evict`   -
 - `afl_banner`        - banner text (e.g., the target name)
 - `afl_version`       - the version of AFL++ used
 - `target_mode`       - default, persistent, qemu, unicorn, non-instrumented
